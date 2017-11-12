@@ -92,7 +92,9 @@ int main(int argc, char *argv[]) {
     getrusage(RUSAGE_SELF, &usag);
     debut_sys = usag.ru_stime;
     debut_cpu = usag.ru_utime;
+
     algo_principal(parallelism, tableau, taille, arg);
+
     gettimeofday(&apres, NULL);
     getrusage(RUSAGE_SELF, &usag);
     fin_sys = usag.ru_stime;

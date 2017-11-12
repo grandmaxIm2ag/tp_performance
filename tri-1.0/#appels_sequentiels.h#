@@ -11,9 +11,7 @@ typedef struct {
     int *tableau;
     int taille;
     void *args_algo;
-    int res;
 } arguments_t;
-
 /* Fonction appelee dans le programme principal avant creation des threads
  * Initialise les structures de donnees propre a l'algo et renvoie un pointeur
  * sur ces structures

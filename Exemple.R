@@ -6,7 +6,7 @@ library(plyr)
 library(reshape2)
 
 # extraction des données
-data_para_naif <- data.frame(read.csv2(file="mesures_500_5000_1_para.csv",sep=';', dec='.'))
+data_para_naif <- data.frame(read.csv2(file="tris_seq.csv",sep=';', dec='.'))
 data_para_transposee <- data.frame(read.csv2("mesures_500_5000_1_para_transposee.csv",sep=';', dec='.'))
 
 # analyse statistique
@@ -37,4 +37,4 @@ p <-  p + theme(panel.background = element_rect(fill = "lightgrey"),
                 panel.grid.major = element_line(colour = "black", size = 0.1),
                 legend.position="bottom")
 
-show(p)
+print(p)
