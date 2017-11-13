@@ -9,7 +9,6 @@ library(reshape2)
 data_para_naif <- data.frame(read.csv2(file="tri_seq.csv",sep=';', dec='.'))
 data_para_transposee <- data.frame(read.csv2("tri_seq.csv",sep=';', dec='.'))
 
-# analyse statistique
 # tracé des résultats obtenus
 
 p <- ggplot()

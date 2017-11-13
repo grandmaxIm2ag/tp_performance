@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt]{scrartcl}
+
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc} %-- pour utiliser des accents en français
+\usepackage{amsmath,amssymb,amsthm} 
+\usepackage[round]{natbib}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage[left=20mm,top=20mm]{geometry}
+\usepackage{algorithmic}
+\usepackage{subcaption}
+\usepackage{mathpazo}
+\usepackage{booktabs}
+\usepackage{hyperref}
+% \usepackage{draftwatermark}
+
+\newcommand{\ie}{ie}
+\newcommand{\eg}{eg}
+\newcommand{\reffig}[1]{Figure~\ref{#1}}
+\newcommand{\refsec}[1]{Section~\ref{#1}}
+
+\setcapindent{1em} %-- for captions of Figures
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+\title{Analyse de performance}
+\author{Barona Stephanie, Grand Maxence}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+%%%
+%
+\section{Introduction}
+
+\subsection{Environnement}
+4 processeurs Intel Core i5-3470CPU 3.20GHz, 4CPU core par processeur
+
+\subsection{Plan d'ex\'ecution}
+
+Pour un nombre de thread variant de 16, nous avons executer l'algorithme de tri selon une taille de vecteur allant de 1000 \`a 1000000, avec un pas de 10000. Chaque ex\'ecution a \'et\'e refaite 30 fois. La m\^e{e}me ex\'ecution est r\'ep\'et\'e 30 fois, pour que nous puissions r\'ecup\'erer la moyenne, pour \'eliminer les incertudes de mesures. \\
+Nous allons chercher \`a conna\^{i}tre le niveau d'ex\'ecution et d'efficait\'e de chaque ex\'ecution.
+
+\subsection{Hypoth\`eses}
+
+begin{itemize}
+
+\item Le temps global de l'ex\'ecution devrait baisser avec l'utilisation des threads. Plus il y a de threads, plus le temps devrait \^{e}tre faible.
+\item Le temps cumul\'e d'utilisationCPU utilisateur devrait augmenter, car nous utilisons plus de threads.
+\item Le temps cumul\'e d'utilisation du CPU par le syst\`eme devrait lui aussi augmenter. Car nous faisons appel \`a plus d'appel syst\`eme.
+\item Comme nous avons 16 coeurs (4 x 4 coeurs), nous devrions voir, une acc\'eleration \`a chaque pallier de thread.  
+end{itemize}
+
+\section{Temps global}
+
+\section{Temps cummul\'e CPU utilisateur}
+
+\section{Temps cumul\'e CPU syst\`eme}
+
+\end{document}
