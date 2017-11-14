@@ -2,6 +2,8 @@ library(ggplot2)
 library(plyr)
 library(reshape2)
 
+
+
 #Préparation données + temps global machine
 data_seq <- data.frame(read.csv2(file="tri_seq.csv", sep=';', dec='.', header=TRUE))
 data_thread2 <- data.frame(read.csv2(file="~/Documents/tp_performance/tris2.csv", sep=';', dec='.', header=TRUE))
@@ -74,9 +76,19 @@ p <- p + geom_line(data=stat_naif16, aes(x=taille, y=mean, colour = "algorithme 
 
 ggsave(filename="global_temps_machine.png", plot=p, width=20, height=20)
 
-#Efficacité 2 threads
-accel<-ddply(stat_naif,c("taille"), , accelration=stat_naif$mean/stat_naif2$mean)
-eff <- ddply(accel,c("taille"), x+14, eff=accel$acceleration/16)
-print(stat_naif)
-print(accel)
-print(eff)
+accel <- function(tab, sortie, sortie2)
+{
+a2 <- merge(stat_naif, tab, by = 'taille')
+a2$acceleration=a2$mean.x/a2$mean.y
+a2$efficacite=a2$acceleration/16
+pa2<-ggplot()
+pa2<-pa2+geom_point(data=a2, aes(x=taille, y=acceleration)) + geom_line(data=a2, aes(x=taille, y=acceleration))
+ggsave(filename=sortie, plot=pa2, width=8, height=8)
+pa2<-ggplot()
+pa2<-pa2+geom_point(data=a2, aes(x=taille, y=efficacite)) + geom_line(data=a2, aes(x=taille, y=efficacite))
+ggsave(filename=sortie2, plot=pa2, width=8, height=8)
+}
+
+
+#Efficacité et Accéleration 2 threads
+accel(stat_naif2,"global_temps_machine_accel2.png", "global_temps_machine_eff2.png")
