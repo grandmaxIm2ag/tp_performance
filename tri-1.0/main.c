@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
     int opt, parallelism =0;
     int taille, i, temps = 0, ressources = 0;
     struct rusage usag;
-    struct timeval avant, debut_cpu, debut_sys, apres, fin_cpu, fin_sys;
+    struct timeval avant, debut_cpu,  apres, fin_cpu;
     int *tableau;
     char *arg=NULL;
 
@@ -90,27 +90,23 @@ int main(int argc, char *argv[]) {
     gettimeofday(&avant, NULL);
     
     getrusage(RUSAGE_SELF, &usag);
-    debut_sys = usag.ru_stime;
     debut_cpu = usag.ru_utime;
 
     algo_principal(parallelism, tableau, taille, arg);
 
     gettimeofday(&apres, NULL);
     getrusage(RUSAGE_SELF, &usag);
-    fin_sys = usag.ru_stime;
     fin_cpu = usag.ru_utime;
     
     if(ressources && temps)
     {
 
-        unsigned long long temps_machine = ((apres.tv_sec * 1000000 + apres.tv_usec)
-          - (avant.tv_sec * 1000000 + avant.tv_usec));
-        unsigned long long temps_cpu = ((fin_cpu.tv_sec * 1000000 + fin_cpu.tv_usec)
-          - (debut_cpu.tv_sec * 1000000 + debut_cpu.tv_usec));
-        unsigned long long temps_sys =  ((fin_sys.tv_sec * 1000000 + fin_sys.tv_usec)
-          - (debut_sys.tv_sec * 1000000 + debut_sys.tv_usec)); 
+      printf("coucou1\n");
+        long long int temps_machine = to_usec(apres) - to_usec(avant);
+printf("coucou2\n");
+	long long int temps_cpu = to_usec(fin_cpu) - to_usec(debut_cpu);
 
-        printf("%d;%llu;%lld;%lld\n",taille, temps_machine, temps_cpu, temps_sys);
+        printf("%d;%llu;%lld\n",taille, temps_machine, temps_cpu);
         
     }
     return 0;

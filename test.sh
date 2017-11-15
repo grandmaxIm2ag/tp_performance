@@ -3,7 +3,7 @@
 for i in 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
 do
 	touch tris"$i".csv
-	echo "taille;tempsMachine;TempsUser;TempSys" > tris"$i".csv
+	echo "taille;tempsMachine;TempsUser" > tris"$i".csv
 	j=1000
 	until [ "$j" -gt 1000000 ]
 	do
@@ -20,7 +20,7 @@ done
 
 
 touch tri_seq.csv
-echo "taille;tempsMachine;TempsUser;TempSys" > tri_seq.csv
+echo "taille;tempsMachine;TempsUser" > tri_seq.csv
 j=1000
 until [ "$j" -gt 1000000 ]
 do
