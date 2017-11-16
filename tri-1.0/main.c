@@ -101,9 +101,9 @@ int main(int argc, char *argv[]) {
     if(ressources && temps)
     {
 
-      printf("coucou1\n");
+
         long long int temps_machine = to_usec(apres) - to_usec(avant);
-printf("coucou2\n");
+
 	long long int temps_cpu = to_usec(fin_cpu) - to_usec(debut_cpu);
 
         printf("%d;%llu;%lld\n",taille, temps_machine, temps_cpu);

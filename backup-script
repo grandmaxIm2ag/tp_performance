@@ -1,0 +1,42 @@
+script("tris3.csv"
+	,"graphes/global_temps_machine_accel3.png", "graphes/global_temps_machine_eff3.png"
+	,"graphes/temps_user_accel3.png", "graphes/temps_user_eff3.png")
+script("tris4.csv"
+	,"graphes/global_temps_machine_accel4.png", "graphes/global_temps_machine_eff4.png"
+	,"graphes/temps_user_accel4.png", "graphes/temps_user_eff4.png")
+script("tris5.csv"
+	,"graphes/global_temps_machine_accel5.png", "graphes/global_temps_machine_eff5.png"
+	,"graphes/temps_user_accel5.png", "graphes/temps_user_eff5.png")
+script("tris6.csv"
+	,"graphes/global_temps_machine_accel6.png", "graphes/global_temps_machine_eff6.png"
+	,"graphes/temps_user_accel6.png", "graphes/temps_user_eff6.png")
+script("tris7.csv"
+	,"graphes/global_temps_machine_accel7.png", "graphes/global_temps_machine_eff7.png"
+	,"graphes/temps_user_accel7.png", "graphes/temps_user_eff7.png")
+script("tris8.csv"
+	,"graphes/global_temps_machine_accel8.png", "graphes/global_temps_machine_eff8.png"
+	,"graphes/temps_user_accel8.png", "graphes/temps_user_eff8.png")
+script("tris9.csv"
+	,"graphes/global_temps_machine_accel9.png", "graphes/global_temps_machine_eff9.png"
+	,"graphes/temps_user_accel9.png", "graphes/temps_user_eff9.png")
+script("tris10.csv"
+	,"graphes/global_temps_machine_accel10.png", "graphes/global_temps_machine_eff10.png"
+	,"graphes/temps_user_accel10.png", "graphes/temps_user_eff10.png")
+script("tris11.csv"
+	,"graphes/global_temps_machine_accel11.png", "graphes/global_temps_machine_eff11.png"
+	,"graphes/temps_user_accel11.png", "graphes/temps_user_eff11.png")
+script("tris12.csv"
+	,"graphes/global_temps_machine_accel12.png", "graphes/global_temps_machine_eff12.png"
+	,"graphes/temps_user_accel12.png", "graphes/temps_user_eff12.png")
+script("tris13.csv"
+	,"graphes/global_temps_machine_accel13.png", "graphes/global_temps_machine_eff13.png"
+	,"graphes/temps_user_accel13.png", "graphes/temps_user_eff13.png")
+script("tris14.csv"
+	,"graphes/global_temps_machine_accel14.png", "graphes/global_temps_machine_eff14.png"
+	,"graphes/temps_user_accel14.png", "graphes/temps_user_eff14.png")
+script("tris15.csv"
+	,"graphes/global_temps_machine_accel15.png", "graphes/global_temps_machine_eff15.png"
+	,"graphes/temps_user_accel15.png", "graphes/temps_user_eff15.png")
+script("tris16.csv"
+	,"graphes/global_temps_machine_accel16.png", "graphes/global_temps_machine_eff16.png"
+	,"graphes/temps_user_accel16.png", "graphes/temps_user_eff16.png")
